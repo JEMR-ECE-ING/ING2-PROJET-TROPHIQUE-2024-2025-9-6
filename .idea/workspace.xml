@@ -10,7 +10,9 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="ING2_PROJET_TROPHIQUE_2024_2025_9_6" targetName="ING2_PROJET_TROPHIQUE_2024_2025_9_6" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -18,10 +20,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48f08210-7d07-4f1f-94b0-8bc56251056c" name="Changes" comment="hello!">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f54c5ef4-e728-4f67-8b2b-572115dfef1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sous_progs_varies.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sous_progs_varies.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ING2-TROPHIQUE-2024-2025-06-09.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +38,6 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -51,8 +51,7 @@
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2ol3yQghzNHWrEbH3HLsH6dnK8E" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2omx92ic4cMgQ50AV3zHawiEGfg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,32 +62,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/User/CLionProjects/ING2-TROPHIQUE-2024-2025-06-09",
+    "last_opened_file_path": "C:/Users/User/CLionProjects/TP5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
-    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\CLionProjects\ING2-PROJET-TROPHIQUE-2024-2025-9-6" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -104,129 +89,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="48f08210-7d07-4f1f-94b0-8bc56251056c" name="Changes" comment="" />
-      <created>1731430589003</created>
+      <changelist id="f54c5ef4-e728-4f67-8b2b-572115dfef1c" name="Changes" comment="" />
+      <created>1731488396779</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1731430589003</updated>
-      <workItem from="1731430590275" duration="78000" />
-      <workItem from="1731430796070" duration="2000" />
-      <workItem from="1731430807805" duration="3095000" />
-      <workItem from="1731436537920" duration="98000" />
+      <updated>1731488396779</updated>
+      <workItem from="1731488398363" duration="436000" />
     </task>
-    <task id="LOCAL-00001" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731430896258</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1731430896258</updated>
-    </task>
-    <task id="LOCAL-00002" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731430945914</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1731430945914</updated>
-    </task>
-    <task id="LOCAL-00003" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731430984826</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1731430984826</updated>
-    </task>
-    <task id="LOCAL-00004" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731431176369</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1731431176369</updated>
-    </task>
-    <task id="LOCAL-00005" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731431391871</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1731431391871</updated>
-    </task>
-    <task id="LOCAL-00006" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731434288271</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1731434288271</updated>
-    </task>
-    <task id="LOCAL-00007" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731434914533</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1731434914533</updated>
-    </task>
-    <task id="LOCAL-00008" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731434970632</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1731434970632</updated>
-    </task>
-    <task id="LOCAL-00009" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731435001383</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1731435001383</updated>
-    </task>
-    <task id="LOCAL-00010" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731435067073</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1731435067073</updated>
-    </task>
-    <task id="LOCAL-00011" summary="hello!">
-      <option name="closed" value="true" />
-      <created>1731435251778</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1731435251778</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VCPKGProject">
-    <isAutomaticEditVcpkgJson value="false" />
-    <isAutomaticCheckingOnLaunch value="false" />
-    <isAutomaticFoundErrors value="true" />
-    <isAutomaticFoundErrors value="true" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="hello!" />
-    <option name="LAST_COMMIT_MESSAGE" value="hello!" />
   </component>
 </project>
