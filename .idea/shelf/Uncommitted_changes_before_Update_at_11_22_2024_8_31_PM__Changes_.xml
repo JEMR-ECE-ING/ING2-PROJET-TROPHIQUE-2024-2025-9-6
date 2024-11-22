@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_22_2024_8_31_PM_[Changes]" date="1732303899059" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_8_31_PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/22/2024 8:31 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/graphes_et_algos.c.obj" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/graphes_et_algos.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_8_31_PM_[Changes]/graphes_et_algos.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/main.c.obj" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/main.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_8_31_PM_[Changes]/main.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/sous_progs_varies.c.obj" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/sous_progs_varies.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_8_31_PM_[Changes]/sous_progs_varies.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Réseaux Trophique Tunisie" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/.ninja_deps" />
+    <option name="AFTER_PATH" value="cmake-build-debug/.ninja_deps" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_8_31_PM_[Changes]/.ninja_deps" />
+  </binary>
+</changelist>
