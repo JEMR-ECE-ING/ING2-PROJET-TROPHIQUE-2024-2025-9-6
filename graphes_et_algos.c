@@ -197,3 +197,26 @@ int calculer_hauteur_trophique(const graphe *g) {
     return max_hauteur;
 }
 
+int lire_graphe(const char *fichier_noeuds, const char *fichier_arcs, graphe *g) {
+    noeud *noeuds = NULL;
+    arc *arcs = NULL;
+
+    // Lire les noeuds
+    int nb_noeuds = lire_noeuds(fichier_noeuds, &noeuds);
+    if (nb_noeuds < 0) {
+        fprintf(stderr, "Erreur lors de la lecture des noeuds depuis le fichier %s\n", fichier_noeuds);
+        return -1;
+    }
+
+    // Lire les arcs
+    int nb_arcs = lire_arcs(fichier_arcs, &arcs);
+    if (nb_arcs < 0) {
+        fprintf(stderr, "Erreur lors de la lecture des arcs depuis le fichier %s\n", fichier_arcs);
+        free(noeuds); // Libérer les noeuds déjà lus
+        return -1;
+    }
+
+    // Créer le graphe
+    *g = creer_graphe(noeuds, nb_noeuds, arcs, nb_arcs);
+    return 0; // Succès
+}

@@ -37,4 +37,5 @@ void afficher_graphe(const graphe *g);
 float calculer_densite(const graphe *g);
 void afficher_successeurs_et_predecesseurs(const graphe *g);
 int calculer_hauteur_trophique(const graphe *g);
+int lire_graphe(const char *fichier_noeuds, const char *fichier_arcs, graphe *g);
 #endif //ING2_PROJET_TROPHIQUE_2024_2025_9_6_GRAPHES_ET_ALGOS_H

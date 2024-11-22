@@ -8,9 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-void reseauTrophique1();
-void reseauTrophique2();
-void reseauTrophique3();
+
 void application();
 void aide();
 void displayMenu();

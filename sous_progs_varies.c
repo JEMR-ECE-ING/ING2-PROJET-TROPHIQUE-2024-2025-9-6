@@ -3,83 +3,7 @@
 //
 
 #include "sous_progs_varies.h"
-
-
-
-void reseauTrophique1() {
-    int retour1;
-    do {
-        printf("--- RESEAU TROPHIQUE 2---\n\n");
-        printf("          Option 1\n");
-        printf("          Option 2\n");
-        printf("          Option 3\n");
-        printf("          Option 4\n");
-        printf("\n          1. Retour au menu principal\n");
-        printf("          2. Quitter\n");
-        printf("Choix : ");
-        scanf("%d", &retour1);
-
-        switch (retour1) {
-            case 1:
-                system("cls");
-                return; // Retour au menu principal
-            case 2:
-                exit(0); // Quitter l'application
-            default:
-                printf("Choix invalide. Veuillez réessayer.\n");
-        }
-    } while (retour1 != 1 && retour1 != 2);
-}
-
-void reseauTrophique2() {
-    int retour2;
-    do {
-        printf("--- RESEAU TROPHIQUE 2 ---\n\n");
-        printf("          Option 1\n");
-        printf("          Option 2\n");
-        printf("          Option 3\n");
-        printf("          Option 4\n");
-        printf("\n          1. Retour au menu principal\n");
-        printf("          2. Quitter\n");
-        printf("Choix : ");
-        scanf("%d", &retour2);
-
-        switch (retour2) {
-            case 1:
-                system("cls");
-                return; // Retour au menu principal
-            case 2:
-                exit(0); // Quitter l'application
-            default:
-                printf("Choix invalide. Veuillez réessayer.\n");
-        }
-    } while (retour2 != 1 && retour2 != 2);
-}
-
-void reseauTrophique3() {
-    int retour3;
-    do {
-        printf("--- RESEAU TROPHIQUE 3 ---\n\n");
-        printf("          Option 1\n");
-        printf("          Option 2\n");
-        printf("          Option 3\n");
-        printf("          Option 4\n");
-        printf("\n          1. Retour au menu principal\n");
-        printf("          2. Quitter\n");
-        printf("Choix : ");
-        scanf("%d", &retour3);
-
-        switch (retour3) {
-            case 1:
-                system("cls");
-                return; // Retour au menu principal
-            case 2:
-                exit(0); // Quitter l'application
-            default:
-                printf("Choix invalide. Veuillez réessayer.\n");
-        }
-    } while (retour3 != 1 && retour3 != 2);
-}
+#include "graphes_et_algos.h"
 
 // Fonction pour le cas où l'utilisateur choisit "Commencer"
 void application() {
@@ -91,36 +15,26 @@ void application() {
         printf("/___//_/|_/  /_/  /___//_/|_|/_/  /_/ |_|\\___//___/ /_/ |_|/_/   /_/   /____//___/ \\___//_/ |_|/_/  /___/ \\____//_/|_/  \n");
         printf("                                                                                                                        \n");
         printf("--- Decouvrez les differents reseaux trophiques ---\n\n");
-        printf("          1. Tunisie \n");
-        printf("          2. Tunis\n");
-        printf("          3. Choisir le reseau manuellement _\n\n");
-        printf("          4. Retour au menu principal\n");
-        printf("          5. Quitter\n");
+        printf("          1. ChoiX du reseau\n");
+        printf("          2. Retour au menu principal\n");
+        printf("          3. Quitter\n");
         printf("\nVotre choix : ");
         scanf("%d", &retour);
 
         switch (retour) {
             case 1:
-                system("cls"); // Efface l'écran (Windows). Utilisez `system("clear")` sous Linux/Mac.
-                reseauTrophique1();
-                break;
-            case 2:
-                system("cls");
-                reseauTrophique2();
-                break;
-            case 3:
                 system("cls");
                 reseauTrophiqueManuel();
                 break;
-            case 4:
+            case 2:
                 system("cls"); // Efface l'écran pour retourner au menu principal
                 return; // Retourne au menu principal
-            case 5:
+            case 3:
                 exit(0); // Quitter l'application
             default:
                 printf("Choix invalide. Veuillez réessayer.\n");
         }
-    } while (retour != 4); // Continue tant que l'utilisateur ne demande pas de retourner au menu principal}
+    } while (retour != 2); // Continue tant que l'utilisateur ne demande pas de retourner au menu principal}
 }
 
 // Fonction pour le cas où l'utilisateur choisit "Aide"
@@ -299,19 +213,36 @@ void dynamique() {
 }
 
 void reseauTrophiqueManuel() {
-    char cheminFichier[256]; // Pour stocker le chemin du fichier
-    FILE *fichier; // Pointeur de fichier
+    graphe g; // Graphe structure to store the loaded graph
+    int fichierValide = 0; // To track if the file was loaded successfully
 
     do {
         printf("--- RESEAUX MANUEL ---\n\n");
-        printf("Entrez le chemin du fichier contenant le reseau trophique : ");
-        scanf(" %255[^\n]", cheminFichier); // Saisie sécurisée du chemin
-        fichier = fopen(cheminFichier, "r");
+        printf("Entrez le nom du reseau trophique de votre choix : ");
+        printf("\n- Reseau1"
+               "\n- Reseau2"
+               "\n- Reseau3"
+               "\n");
+        char cheminFichier[256];
+        scanf("\n %255[^\n]", cheminFichier); // Secure input
 
-        if (fichier == NULL) {
-            printf("Erreur : Impossible d'ouvrir le fichier. Veuillez reessayer.\n");
+        // normalement ca doit marcher
+        if (strcmp(cheminFichier, "Reseau1") == 0) {
+            fichierValide = lire_graphe("data_rs/noeudsRS1.csv", "data_rs/arcsRS1.csv", &g) == 0;
+        } else if (strcmp(cheminFichier, "Reseau2") == 0) {
+            fichierValide = lire_graphe("data_rs/noeudsRS2.csv", "data_rs/arcsRS2.csv", &g) == 0;
+        } else if (strcmp(cheminFichier, "Reseau3") == 0) {
+            fichierValide = lire_graphe("data_rs/noeudsRS3.csv", "data_rs/arcsRS3.csv", &g) == 0;
         } else {
-            fclose(fichier); // On ferme le fichier après validation
+            printf("Choix invalide. Veuillez entrer 'Reseau1', 'Reseau2' ou 'Reseau3'.\n");
+            continue; // ON REFAIT LA BOUCLE
+        }
+
+        if (!fichierValide) {
+            printf("Erreur : Impossible de charger les fichiers pour %s. Veuillez réessayer.\n", cheminFichier);
+        } else {
+            fclose(fopen(cheminFichier, "r")); // VALIDATION COOL
+            // INITIALISATION
             system("cls");
             printf("\033[1;32m");
             printf("    ___                                                   ___  ___ ___  _   __\n");
@@ -408,11 +339,10 @@ void reseauTrophiqueManuel() {
             printf("\033[0m"); // Réinitialise la couleur par défa
             sleep(3);
             system("cls");
-            break;
         }
-    } while (1); // Boucle jusqu'à une saisie correcte
+    } while (!fichierValide); // Loop until a valid file is loaded
 
-    // Une fois le fichier validé, aller vers les options d'analyse
+    // Once the file is validated, move to the analysis options
     int retour3;
     do {
         printf("--- OPTIONS D'ANALYSE POUR LE RESEAU MANUEL ---\n\n");
@@ -437,7 +367,7 @@ void reseauTrophiqueManuel() {
                 break;
             case 3:
                 system("cls");
-                niveauTrophique();
+                printf("Hauteur trophique: %d\n", calculer_hauteur_trophique(&g));
                 break;
             case 4:
                 system("cls");
@@ -449,11 +379,21 @@ void reseauTrophiqueManuel() {
                 break;
             case 6:
                 system("cls");
-                return; // Retour au menu principal
+                // Free resources before returning to the main menu
+                free(g.noeuds);
+                free(g.arcs);
+                return;
             case 7:
-                exit(0); // Quitter l'application
+                // Free resources before exiting
+                free(g.noeuds);
+                free(g.arcs);
+                exit(0);
             default:
                 printf("Choix invalide. Veuillez réessayer.\n");
         }
     } while (retour3 != 6);
+
+    //LIBERATION DES RESOURCES
+    free(g.noeuds);
+    free(g.arcs);
 }
