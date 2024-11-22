@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void RéseauxTrophique1() {
+void ReseauxTrophique1() {
     int retour1;
     do {
         printf("--- RESEAUX 2---\n\n");
@@ -26,7 +26,7 @@ void RéseauxTrophique1() {
     } while (retour1 != 1 && retour1 != 2);
 }
 
-void RéseauxTrophique2() {
+void ReseauxTrophique2() {
     int retour2;
     do {
         printf("--- RESEAUX 2 ---\n\n");
@@ -51,7 +51,7 @@ void RéseauxTrophique2() {
     } while (retour2 != 1 && retour2 != 2);
 }
 
-void RéseauxTrophique3() {
+void ReseauxTrophique3() {
     int retour3;
     do {
         printf("--- RESEAUX 3 ---\n\n");
@@ -97,15 +97,15 @@ void Application() {
         switch (retour) {
             case 1:
                 system("cls"); // Efface l'écran (Windows). Utilisez `system("clear")` sous Linux/Mac.
-                RéseauxTrophique1();
+                ReseauxTrophique1();
                 break;
             case 2:
                 system("cls");
-                RéseauxTrophique2();
+                ReseauxTrophique2();
                 break;
             case 3:
                 system("cls");
-                RéseauxTrophique3();
+                ReseauxTrophique3();
                 break;
             case 4:
                 system("cls"); // Efface l'écran pour retourner au menu principal

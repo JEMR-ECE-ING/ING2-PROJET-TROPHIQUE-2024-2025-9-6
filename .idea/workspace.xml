@@ -20,13 +20,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54c5ef4-e728-4f67-8b2b-572115dfef1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sous_progs_varies.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sous_progs_varies.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ING2-TROPHIQUE-2024-2025-06-09.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f54c5ef4-e728-4f67-8b2b-572115dfef1c" name="Changes" comment="Donc je viens de creer des fichiers c avec leurs headers. Respectez bien le contenu qui doit se trouver dans ceux-ci. Algos dans algos, programmes d'affichage et autres dans sous progs varies.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4453c23a784a92e10b78.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-11-13T09-06-55-0501.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ING2_PROJET_TROPHIQUE_2024_2025_9_6-Debug-2a3a10723b32e5f30e1d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ING2_PROJET_TROPHIQUE_2024_2025_9_6.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ING2_PROJET_TROPHIQUE_2024_2025_9_6.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphes_et_algos.c" beforeDir="false" afterPath="$PROJECT_DIR$/graphes_et_algos.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphes_et_algos.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphes_et_algos.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,30 +64,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/User/CLionProjects/TP5",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/CLionProjects/TP5&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ING2_PROJET_TROPHIQUE_2024_2025_9_6" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ING2_PROJET_TROPHIQUE_2024_2025_9_6" TARGET_NAME="ING2_PROJET_TROPHIQUE_2024_2025_9_6" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ING2_PROJET_TROPHIQUE_2024_2025_9_6" RUN_TARGET_NAME="ING2_PROJET_TROPHIQUE_2024_2025_9_6">
+    <configuration name="ING2_PROJET_TROPHIQUE_2024_2025_9_6" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="true" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ING2_PROJET_TROPHIQUE_2024_2025_9_6" TARGET_NAME="ING2_PROJET_TROPHIQUE_2024_2025_9_6" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ING2_PROJET_TROPHIQUE_2024_2025_9_6" RUN_TARGET_NAME="ING2_PROJET_TROPHIQUE_2024_2025_9_6">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -94,11 +96,40 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731488396779</updated>
-      <workItem from="1731488398363" duration="436000" />
+      <workItem from="1731488398363" duration="1594000" />
+      <workItem from="1731514779055" duration="594000" />
+      <workItem from="1732277402334" duration="3367000" />
     </task>
+    <task id="LOCAL-00001" summary="Donc je viens de creer des fichiers c avec leurs headers. Respectez bien le contenu qui doit se trouver dans ceux-ci. Algos dans algos, programmes d'affichage et autres dans sous progs varies.">
+      <option name="closed" value="true" />
+      <created>1731488923219</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731488923219</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Donc je viens de creer des fichiers c avec leurs headers. Respectez bien le contenu qui doit se trouver dans ceux-ci. Algos dans algos, programmes d'affichage et autres dans sous progs varies.">
+      <option name="closed" value="true" />
+      <created>1731488933174</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731488933174</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Donc je viens de creer des fichiers c avec leurs headers. Respectez bien le contenu qui doit se trouver dans ceux-ci. Algos dans algos, programmes d'affichage et autres dans sous progs varies." />
+    <option name="LAST_COMMIT_MESSAGE" value="Donc je viens de creer des fichiers c avec leurs headers. Respectez bien le contenu qui doit se trouver dans ceux-ci. Algos dans algos, programmes d'affichage et autres dans sous progs varies." />
   </component>
 </project>
