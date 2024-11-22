@@ -1,79 +1,248 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void Connexite() {
+    int retourA;
+    do {
+        printf("--- Connexite ---\n\n");
+        printf("          1. Retour au menu principal\n");
+        printf("          2. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &retourA);
+
+        switch (retourA) {
+            case 1:
+                system("cls");
+            return; // Retour au menu principal
+            case 2:
+                exit(0); // Quitter l'application
+            default:
+                printf("Choix invalide. Veuillez réessayer.\n");
+        }
+    } while (retourA != 1 && retourA != 2);
+}
+
+
+void RechercheSommets() {
+    int retourB;
+    do {
+        printf("--- Recherche Sommets ---\n\n");
+        printf("          1. Retour au menu principal\n");
+        printf("          2. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &retourB);
+
+        switch (retourB) {
+            case 1:
+                system("cls");
+            return; // Retour au menu principal
+            case 2:
+                exit(0); // Quitter l'application
+            default:
+                printf("Choix invalide. Veuillez réessayer.\n");
+        }
+    } while (retourB != 1 && retourB != 2);
+}
+
+void NiveauxTrophique() {
+    int retourC;
+    do {
+        printf("--- Niveaux trophiques ---\n\n");
+        printf("          1. Retour au menu principal\n");
+        printf("          2. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &retourC);
+
+        switch (retourC) {
+            case 1:
+                system("cls");
+            return; // Retour au menu principal
+            case 2:
+                exit(0); // Quitter l'application
+            default:
+                printf("Choix invalide. Veuillez réessayer.\n");
+        }
+    } while (retourC != 1 && retourC != 2);
+}
+
+void ImportanceRelative() {
+    int retourD;
+    do {
+        printf("--- ImportanceRelative ---\n\n");
+        printf("          1. Retour au menu principal\n");
+        printf("          2. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &retourD);
+
+        switch (retourD) {
+            case 1:
+                system("cls");
+            return; // Retour au menu principal
+            case 2:
+                exit(0); // Quitter l'application
+            default:
+                printf("Choix invalide. Veuillez réessayer.\n");
+        }
+    } while (retourD != 1 && retourD != 2);
+}
+
+void Dynamique() {
+    int retourE;
+    do {
+        printf("--- Dynamique ---\n\n");
+        printf("          1. Retour au menu principal\n");
+        printf("          2. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &retourE);
+
+        switch (retourE) {
+            case 1:
+                system("cls");
+            return; // Retour au menu principal
+            case 2:
+                exit(0); // Quitter l'application
+            default:
+                printf("Choix invalide. Veuillez réessayer.\n");
+        }
+    } while (retourE != 1 && retourE != 2);
+}
+
 void RéseauxTrophique1() {
     int retour1;
     do {
-        printf("--- RESEAUX 2---\n\n");
-        printf("          Option 1\n");
-        printf("          Option 2\n");
-        printf("          Option 3\n");
-        printf("          Option 4\n");
-        printf("\n          1. Retour au menu principal\n");
-        printf("          2. Quitter\n");
+        printf("--- RESEAUX 1---\n\n");
+        printf("          1. Verification de la connexite du reseau\n");
+        printf("          2. Recherche des sommets particuliers\n");
+        printf("          3. Etude des niveaux trophiques\n");
+        printf("          4. Importance relative des espèces\n");
+        printf("          5. Dynamique des populations\n");
+        printf("\n          6. Retour au menu principal\n");
+        printf("          7. Quitter\n");
         printf("Choix : ");
         scanf("%d", &retour1);
 
         switch (retour1) {
             case 1:
                 system("cls");
-            return; // Retour au menu principal
+            Connexite();
+            break;
             case 2:
+                system("cls");
+            RechercheSommets();
+            break;
+            case 3:
+                system("cls");
+            NiveauxTrophique();
+            break;
+            case 4:
+                system("cls");
+            ImportanceRelative();
+            break;
+            case 5:
+                system("cls");
+            Dynamique();
+            break;
+            case 6:
+                system("cls");
+            return; // Retour au menu principal
+            case 7:
                 exit(0); // Quitter l'application
             default:
                 printf("Choix invalide. Veuillez réessayer.\n");
         }
-    } while (retour1 != 1 && retour1 != 2);
+    } while (retour1 != 6);
 }
 
 void RéseauxTrophique2() {
     int retour2;
     do {
         printf("--- RESEAUX 2 ---\n\n");
-        printf("          Option 1\n");
-        printf("          Option 2\n");
-        printf("          Option 3\n");
-        printf("          Option 4\n");
-        printf("\n          1. Retour au menu principal\n");
-        printf("          2. Quitter\n");
+        printf("          1. Verification de la connexite du reseau\n");
+        printf("          2. Recherche des sommets particuliers\n");
+        printf("          3. Etude des niveaux trophiques\n");
+        printf("          4. Importance relative des espèces\n");
+        printf("          5. Dynamique des populations\n");
+        printf("\n          6. Retour au menu principal\n");
+        printf("          7. Quitter\n");
         printf("Choix : ");
         scanf("%d", &retour2);
 
         switch (retour2) {
             case 1:
                 system("cls");
-            return; // Retour au menu principal
+            Connexite();
+            break;
             case 2:
+                system("cls");
+            RechercheSommets();
+            break;
+            case 3:
+                system("cls");
+            NiveauxTrophique();
+            break;
+            case 4:
+                system("cls");
+            ImportanceRelative();
+            break;
+            case 5:
+                system("cls");
+            Dynamique();
+            break;
+            case 6:
+                system("cls");
+            return; // Retour au menu principal
+            case 7:
                 exit(0); // Quitter l'application
             default:
                 printf("Choix invalide. Veuillez réessayer.\n");
         }
-    } while (retour2 != 1 && retour2 != 2);
+    } while (retour2 != 6);
 }
 
-void RéseauxTrophique3() {
+void RéseauxTrophiqueManuel() {
     int retour3;
     do {
-        printf("--- RESEAUX 3 ---\n\n");
-        printf("          Option 1\n");
-        printf("          Option 2\n");
-        printf("          Option 3\n");
-        printf("          Option 4\n");
-        printf("\n          1. Retour au menu principal\n");
-        printf("          2. Quitter\n");
+        printf("--- RESEAUX MANUEL ---\n\n");
+        printf("          1. Verification de la connexite du reseau\n");
+        printf("          2. Recherche des sommets particuliers\n");
+        printf("          3. Etude des niveaux trophiques\n");
+        printf("          4. Importance relative des espèces\n");
+        printf("          5. Dynamique des populations\n");
+        printf("\n          6. Retour au menu principal\n");
+        printf("          7. Quitter\n");
         printf("Choix : ");
         scanf("%d", &retour3);
 
         switch (retour3) {
             case 1:
                 system("cls");
-            return; // Retour au menu principal
+            Connexite();
+            break;
             case 2:
+                system("cls");
+            RechercheSommets();
+            break;
+            case 3:
+                system("cls");
+            NiveauxTrophique();
+            break;
+            case 4:
+                system("cls");
+            ImportanceRelative();
+            break;
+            case 5:
+                system("cls");
+            Dynamique();
+            break;
+            case 6:
+                system("cls");
+            return; // Retour au menu principal
+            case 7:
                 exit(0); // Quitter l'application
             default:
                 printf("Choix invalide. Veuillez réessayer.\n");
         }
-    } while (retour3 != 1 && retour3 != 2);
+    } while (retour3 != 6);
 }
 
 // Fonction pour le cas où l'utilisateur choisit "Commencer"
@@ -88,7 +257,7 @@ void Application() {
         printf("--- Decouvrez les differents reseaux trophiques ---\n\n");
         printf("          1. Tunisie \n");
         printf("          2. Tunis\n");
-        printf("          3. 1 2 3 Viva La Tunisie\n\n");
+        printf("          3. Choisir le reseau manuellement _\n\n");
         printf("          4. Retour au menu principal\n");
         printf("          5. Quitter\n");
         printf("\nVotre choix : ");
@@ -105,7 +274,7 @@ void Application() {
                 break;
             case 3:
                 system("cls");
-                RéseauxTrophique3();
+                RéseauxTrophiqueManuel();
                 break;
             case 4:
                 system("cls"); // Efface l'écran pour retourner au menu principal
