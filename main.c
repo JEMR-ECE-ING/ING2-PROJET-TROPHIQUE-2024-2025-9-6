@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 void Connexite() {
     int retourA;
@@ -200,9 +201,123 @@ void RéseauxTrophique2() {
 }
 
 void RéseauxTrophiqueManuel() {
-    int retour3;
+    char cheminFichier[256]; // Pour stocker le chemin du fichier
+    FILE *fichier; // Pointeur de fichier
+
     do {
         printf("--- RESEAUX MANUEL ---\n\n");
+        printf("Entrez le chemin du fichier contenant le reseau trophique : ");
+        scanf(" %255[^\n]", cheminFichier); // Saisie sécurisée du chemin
+        fichier = fopen(cheminFichier, "r");
+
+        if (fichier == NULL) {
+            printf("Erreur : Impossible d'ouvrir le fichier. Veuillez reessayer.\n");
+        } else {
+            fclose(fichier); // On ferme le fichier après validation
+            system("cls");
+            printf("\033[1;32m");
+            printf("    ___                                                   ___  ___ ___  _   __\n");
+            printf("   / _/__ __ ____ ____ ____ ____ ____ ____ ____ ____ ____/  / <  // _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ //___//___//___//___//___//___//___//___//___// /  / // // / _/_/_ \n");
+            printf(" / /  /_\\_\\                                            _/ /  /_/ \\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                     \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;31m");
+            printf("    ___                                                   ___  ___  ___  _   __\n");
+            printf("   / _/__ ____ __ ____ ____ ____ ____ ____ ____ ____ ____/  / |_  |/ _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ //___//___//___//___//___//___//___//___// / / __// // / _/_/_ \n");
+            printf(" / /  /_\\_\\/_\\_\\                                       _/ / /____/\\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                      \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;32m");
+            printf("    ___                                                   ___  ____ ___  _   __\n");
+            printf("   / _/__ ____ ____ __ ____ ____ ____ ____ ____ ____ ____/  / |_  // _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ /\\ \\ //___//___//___//___//___//___//___// / _/_ </ // / _/_/_ \n");
+            printf(" / /  /_\\_\\/\\_\\/\\_\\                                    _/ / /____/\\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                      \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;31m");
+            printf("    ___                                                   ___  ____  ___  _   __\n");
+            printf("   / _/__ ____ ____ ____ __ ____ ____ ____ ____ ____ ____/  / / / / / _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ /\\ \\ /\\ \\ //___//___//___//___//___//___// / /_  _// // / _/_/_ \n");
+            printf(" / /  /_\\_\\/\\_\\/\\_\\/\\_\\                                _/ /   /_/  \\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                       \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;32m");
+            printf("    ___                                                   ___  ____ ___  _   __\n");
+            printf("   / _/__ ____ ____ ____ ____ __ ____ ____ ____ ____ ____/  / / __// _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ //___//___//___//___//___// / /__ \\/ // / _/_/_ \n");
+            printf(" / /  /_\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\                        _/ / /____/\\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                      \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;31m");
+            printf("    ___                                                   ___  ____ ___  _   __\n");
+            printf("   / _/__ ____ ____ ____ ____ ____ __ ____ ____ ____ ____/  / / __// _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ //___//___//___//___// / / _ \\/ // / _/_/_ \n");
+            printf(" / /  /_\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\                    _/ /  \\___/\\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                      \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;32m");
+            printf("    ___                                                   ___  ____ ___  _   __\n");
+            printf("   / _/__ ____ ____ ____ ____ ____ ____ __ ____ ____ ____/  / /_  // _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ //___//___//___// /   / // // / _/_/_ \n");
+            printf(" / /  /_\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\                _/ /   /_/ \\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                      \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;31m");
+            printf("    ___                                                   ___  ___   ___  _   __\n");
+            printf("   / _/__ ____ ____ ____ ____ ____ ____ ____ __ ____ ____/  / ( _ ) / _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ //___//___// / / _  |/ // / _/_/_ \n");
+            printf(" / /  /_\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\            _/ /  \\___/ \\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                       \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;32m");
+            printf("    ___                                                   ___  ___   ___  _   __\n");
+            printf("   / _/__ ____ ____ ____ ____ ____ ____ ____ ____ __ ____/  / / _ \\ / _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ //___// /  \\_, // // / _/_/_ \n");
+            printf(" / /  /_\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\        _/ /  /___/ \\___/ /_/ (_)\n");
+            printf("/__/                                                  /__/                       \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;31m");
+            printf("    ___                                                    ___  ___ ___   ___  _   __\n");
+            printf("   / _/__ ____ ____ ____ ____ ____ ____ ____ ____ ____ __ /  / <  // _ \\ / _ \\(_)_/_/\n");
+            printf("  / /  \\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ /\\ \\ / / /  / // // // // / _/_/_ \n");
+            printf(" / /  /_\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\/\\_\\ _/ /  /_/ \\___/ \\___/ /_/ (_)\n");
+            printf("/__/                                                   /__/                           \n");
+            printf("\033[0m");
+            sleep(1);
+            system("cls");
+            printf("\033[1;32m"); // Définit la couleur verte
+            printf("\n\n              Fichier charge avec succes !\n\n\n");
+            printf("\033[0m"); // Réinitialise la couleur par défa
+            sleep(3);
+            system("cls");
+            break;
+        }
+    } while (1); // Boucle jusqu'à une saisie correcte
+
+    // Une fois le fichier validé, aller vers les options d'analyse
+    int retour3;
+    do {
+        printf("--- OPTIONS D'ANALYSE POUR LE RESEAU MANUEL ---\n\n");
         printf("          1. Verification de la connexite du reseau\n");
         printf("          2. Recherche des sommets particuliers\n");
         printf("          3. Etude des niveaux trophiques\n");
@@ -216,27 +331,27 @@ void RéseauxTrophiqueManuel() {
         switch (retour3) {
             case 1:
                 system("cls");
-            Connexite();
-            break;
+                Connexite();
+                break;
             case 2:
                 system("cls");
-            RechercheSommets();
-            break;
+                RechercheSommets();
+                break;
             case 3:
                 system("cls");
-            NiveauxTrophique();
-            break;
+                NiveauxTrophique();
+                break;
             case 4:
                 system("cls");
-            ImportanceRelative();
-            break;
+                ImportanceRelative();
+                break;
             case 5:
                 system("cls");
-            Dynamique();
-            break;
+                Dynamique();
+                break;
             case 6:
                 system("cls");
-            return; // Retour au menu principal
+                return; // Retour au menu principal
             case 7:
                 exit(0); // Quitter l'application
             default:
@@ -244,6 +359,7 @@ void RéseauxTrophiqueManuel() {
         }
     } while (retour3 != 6);
 }
+
 
 // Fonction pour le cas où l'utilisateur choisit "Commencer"
 void Application() {
