@@ -18,5 +18,6 @@ void niveauTrophique();
 void importanceRelative();
 void dynamique();
 void reseauTrophiqueManuel();
+void densite();
 
 #endif //ING2_PROJET_TROPHIQUE_2024_2025_9_6_SOUS_PROGS_VARIES_H

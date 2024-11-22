@@ -149,10 +149,65 @@ void rechercheSommets() {
     } while (retourB != 1 && retourB != 2);
 }
 
-void niveauTrophique() {
+void afficherSuccesseursPredecesseursMenu(const graphe *g) {
+    int retourE;
+    do {
+        printf("--- Affichage des successeurs et predecesseurs ---\n\n");
+
+        // Parcourt tous les noeuds et affiche leurs successeurs et prédécesseurs
+        for (int i = 0; i < g->ordre; i++) {
+            int id_noeud = g->noeuds[i].id;
+
+            // Affiche les prédécesseurs en vert
+            printf("\033[1;32m"); // Définit la couleur du texte en vert
+            printf("Predecesseurs de %s:\n", trouver_label(g, id_noeud));
+            for (int j = 0; j < g->nb_arcs; j++) {
+                if (g->arcs[j].cible == id_noeud) {
+                    printf("  <- %s\n", trouver_label(g, g->arcs[j].source));
+                }
+            }
+
+            // Affiche les successeurs en rouge
+            printf("\033[1;31m"); // Définit la couleur du texte en rouge
+            printf("Successeurs de %s:\n", trouver_label(g, id_noeud));
+            for (int j = 0; j < g->nb_arcs; j++) {
+                if (g->arcs[j].source == id_noeud) {
+                    printf("  -> %s\n", trouver_label(g, g->arcs[j].cible));
+                }
+            }
+
+            // Réinitialise la couleur et ajoute un séparateur pour plus de lisibilité
+            printf("\033[0m"); // Réinitialise la couleur du texte
+            printf("---------------------------------------\n");
+        }
+
+        // Menu d'options
+        printf("          1. Retour au menu d'analyse\n");
+        printf("          2. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &retourE);
+
+        // Gère le choix de l'utilisateur
+        switch (retourE) {
+            case 1:
+                system("cls");
+                return; // Retourne au menu d'analyse
+            case 2:
+                exit(0); // Quitte l'application
+            default:
+                printf("Choix invalide. Veuillez réessayer.\n");
+        }
+    } while (retourE != 1 && retourE != 2);
+}
+
+void niveauTrophique(graphe *g) {
     int retourC;
     do {
         printf("--- Niveaux trophiques ---\n\n");
+        int resultat = calculer_hauteur_trophique(g);
+        printf("\033[1;32m");
+        printf("          HAUTEUR TROPHIQUE MAX: %d\n", resultat);
+        printf("\033[0m");
         printf("          1. Retour au menu principal\n");
         printf("          2. Quitter\n");
         printf("Choix : ");
@@ -173,7 +228,7 @@ void niveauTrophique() {
 void importanceRelative() {
     int retourD;
     do {
-        printf("--- ImportanceRelative ---\n\n");
+        printf("--- Importance Relative ---\n\n");
         printf("          1. Retour au menu principal\n");
         printf("          2. Quitter\n");
         printf("Choix : ");
@@ -195,6 +250,58 @@ void dynamique() {
     int retourE;
     do {
         printf("--- Dynamique ---\n\n");
+        printf("          1. Retour au menu principal\n");
+        printf("          2. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &retourE);
+
+        switch (retourE) {
+            case 1:
+                system("cls");
+                return; // Retour au menu principal
+            case 2:
+                exit(0); // Quitter l'application
+            default:
+                printf("Choix invalide. Veuillez réessayer.\n");
+        }
+    } while (retourE != 1 && retourE != 2);
+}
+
+void densite(graphe *g) {
+    int retourE;
+    do {
+        printf("--- Calcul de la densite ---\n\n");
+        float resultat = calculer_densite(g);
+        printf("\033[1;32m");
+        printf("          DENSITE DU GRAPHE: %.2f\n", resultat);
+        printf("\033[0m");
+        printf("          1. Retour au menu principal\n");
+        printf("          2. Quitter\n");
+        printf("Choix : ");
+        scanf("%d", &retourE);
+
+        switch (retourE) {
+            case 1:
+                system("cls");
+                return; // Retour au menu principal
+            case 2:
+                exit(0); // Quitter l'application
+            default:
+                printf("Choix invalide. Veuillez réessayer.\n");
+        }
+    } while (retourE != 1 && retourE != 2);
+}
+
+void afficherGrapheMenu(const graphe *g) {
+    int retourE;
+    do {
+        printf("--- Affichage du graphe ---\n\n");
+
+        // Display the graph
+        printf("\033[1;34m"); // Set text color to blue
+        afficher_graphe(g);
+        printf("\033[0m");   // Reset text color
+
         printf("          1. Retour au menu principal\n");
         printf("          2. Quitter\n");
         printf("Choix : ");
@@ -345,14 +452,18 @@ void reseauTrophiqueManuel() {
     // Once the file is validated, move to the analysis options
     int retour3;
     do {
-        printf("--- OPTIONS D'ANALYSE POUR LE RESEAU MANUEL ---\n\n");
-        printf("          1. Verification de la connexite du reseau\n");
-        printf("          2. Recherche des sommets particuliers\n");
-        printf("          3. Etude des niveaux trophiques\n");
-        printf("          4. Importance relative des espèces\n");
-        printf("          5. Dynamique des populations\n");
-        printf("\n          6. Retour au menu principal\n");
-        printf("          7. Quitter\n");
+        printf("--- OPTIONS D'ANALYSE POUR LE RESEAU MANUEL ---\n\n"    );
+        printf("          1. Verification de la connexite du reseau\n"  );
+        printf("          2. Recherche des sommets particuliers\n"      );
+        printf("          3. Etude des niveaux trophiques\n"            );
+        printf("          4. Importance relative des especes\n"         );
+        printf("          5. Dynamique des populations\n"               );
+        printf("          6. Densite du graphe\n"                       );
+        printf("          7. Affichage du graphe\n"                     );
+        printf("          8. Afficahe des succeseurs et predecesseurs\n");
+        printf("                                      \n"             );
+        printf("          9. Retour au menu principal\n");
+        printf("          10. Quitter\n");
         printf("Choix : ");
         scanf("%d", &retour3);
 
@@ -367,7 +478,7 @@ void reseauTrophiqueManuel() {
                 break;
             case 3:
                 system("cls");
-                printf("Hauteur trophique: %d\n", calculer_hauteur_trophique(&g));
+                niveauTrophique(&g);
                 break;
             case 4:
                 system("cls");
@@ -379,19 +490,31 @@ void reseauTrophiqueManuel() {
                 break;
             case 6:
                 system("cls");
-                // Free resources before returning to the main menu
+                densite(&g);
+                break;
+            case 7:
+                system("cls");
+                afficherGrapheMenu(&g);
+                break;
+            case 8:
+                system("cls");
+                afficherSuccesseursPredecesseursMenu(&g);
+                break;
+            case 9:
+                system("cls");
+                // Liberation des resources
                 free(g.noeuds);
                 free(g.arcs);
                 return;
-            case 7:
-                // Free resources before exiting
+            case 10:
+                // Liberation des resources
                 free(g.noeuds);
                 free(g.arcs);
                 exit(0);
             default:
                 printf("Choix invalide. Veuillez réessayer.\n");
         }
-    } while (retour3 != 6);
+    } while (retour3 != 9);
 
     //LIBERATION DES RESOURCES
     free(g.noeuds);
