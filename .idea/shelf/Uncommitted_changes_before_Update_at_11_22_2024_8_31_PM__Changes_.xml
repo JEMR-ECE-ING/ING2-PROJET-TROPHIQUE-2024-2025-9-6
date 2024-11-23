@@ -18,8 +18,6 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="Réseaux Trophique Tunisie" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="cmake-build-debug/.ninja_deps" />

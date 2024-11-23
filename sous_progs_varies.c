@@ -15,7 +15,7 @@ void application() {
         printf("/___//_/|_/  /_/  /___//_/|_|/_/  /_/ |_|\\___//___/ /_/ |_|/_/   /_/   /____//___/ \\___//_/ |_|/_/  /___/ \\____//_/|_/  \n");
         printf("                                                                                                                        \n");
         printf("--- Decouvrez les differents reseaux trophiques ---\n\n");
-        printf("          1. ChoiX du reseau\n");
+        printf("          1. Choix du reseau\n");
         printf("          2. Retour au menu principal\n");
         printf("          3. Quitter\n");
         printf("\nVotre choix : ");
@@ -325,30 +325,33 @@ void reseauTrophiqueManuel() {
 
     do {
         printf("--- RESEAUX MANUEL ---\n\n");
-        printf("Entrez le nom du reseau trophique de votre choix : ");
-        printf("\n- Reseau1"
-               "\n- Reseau2"
-               "\n- Reseau3"
-               "\n");
-        char cheminFichier[256];
-        scanf("\n %255[^\n]", cheminFichier); // Secure input
+        printf("Entrez le numero du reseau trophique de votre choix :\n");
+        printf("1 - Reseau1\n");
+        printf("2 - Reseau2\n");
+        printf("3 - Reseau3\n");
+        printf("Votre choix : ");
 
-        // normalement ca doit marcher
-        if (strcmp(cheminFichier, "Reseau1") == 0) {
-            fichierValide = lire_graphe("data_rs/noeudsRS1.csv", "data_rs/arcsRS1.csv", &g) == 0;
-        } else if (strcmp(cheminFichier, "Reseau2") == 0) {
-            fichierValide = lire_graphe("data_rs/noeudsRS2.csv", "data_rs/arcsRS2.csv", &g) == 0;
-        } else if (strcmp(cheminFichier, "Reseau3") == 0) {
-            fichierValide = lire_graphe("data_rs/noeudsRS3.csv", "data_rs/arcsRS3.csv", &g) == 0;
-        } else {
-            printf("Choix invalide. Veuillez entrer 'Reseau1', 'Reseau2' ou 'Reseau3'.\n");
-            continue; // ON REFAIT LA BOUCLE
+        int choix;
+        scanf("%d", &choix); // Lecture du choix de l'utilisateur
+
+        switch (choix) {
+            case 1:
+                fichierValide = lire_graphe("data_rs/noeudsRS1.csv", "data_rs/arcsRS1.csv", &g) == 0;
+            break;
+            case 2:
+                fichierValide = lire_graphe("data_rs/noeudsRS2.csv", "data_rs/arcsRS2.csv", &g) == 0;
+            break;
+            case 3:
+                fichierValide = lire_graphe("data_rs/noeudsRS3.csv", "data_rs/arcsRS3.csv", &g) == 0;
+            break;
+            default:
+                printf("Choix invalide. Veuillez entrer un numero entre 1 et 3.\n");
+            continue; // Retour au début de la boucle
         }
 
         if (!fichierValide) {
-            printf("Erreur : Impossible de charger les fichiers pour %s. Veuillez réessayer.\n", cheminFichier);
+            printf("Erreur : Impossible de charger les fichiers pour Reseau%d. Veuillez réessayer.\n", choix);
         } else {
-            fclose(fopen(cheminFichier, "r")); // VALIDATION COOL
             // INITIALISATION
             system("cls");
             printf("\033[1;32m");
@@ -452,18 +455,27 @@ void reseauTrophiqueManuel() {
     // Once the file is validated, move to the analysis options
     int retour3;
     do {
-        printf("--- OPTIONS D'ANALYSE POUR LE RESEAU MANUEL ---\n\n"    );
-        printf("          1. Verification de la connexite du reseau\n"  );
-        printf("          2. Recherche des sommets particuliers\n"      );
-        printf("          3. Etude des niveaux trophiques\n"            );
-        printf("          4. Importance relative des especes\n"         );
-        printf("          5. Dynamique des populations\n"               );
-        printf("          6. Densite du graphe\n"                       );
-        printf("          7. Affichage du graphe\n"                     );
-        printf("          8. Afficahe des succeseurs et predecesseurs\n");
-        printf("                                      \n"             );
-        printf("          9. Retour au menu principal\n");
-        printf("          10. Quitter\n");
+        // Début de l'encadré rose
+        printf("\033[1;35m"); // Couleur rose pour le cadre (bordures)
+        printf("------------------------------------------------------\n");
+        printf("| \033[1;36m  --- OPTIONS D'ANALYSE POUR LE RESEAU MANUEL ---  \033[1;35m |\n"); // Instructions en bleu clair
+        printf("-------------------------------------------------------\n");
+        printf("| \033[1;36m  1. Verification de la connexite du reseau         \033[1;35m|\n");
+        printf("| \033[1;36m  2. Recherche des sommets particuliers             \033[1;35m|\n");
+        printf("| \033[1;36m  3. Etude des niveaux trophiques                   \033[1;35m|\n");
+        printf("| \033[1;36m  4. Importance relative des especes                \033[1;35m|\n");
+        printf("| \033[1;36m  5. Dynamique des populations                      \033[1;35m|\n");
+        printf("| \033[1;36m  6. Densite du graphe                              \033[1;35m|\n");
+        printf("| \033[1;36m  7. Affichage du graphe                            \033[1;35m|\n");
+        printf("| \033[1;36m  8. Affichage des successeurs et predecesseurs     \033[1;35m|\n");
+        printf("| \033[1;36m  9. Retour au menu principal                       \033[1;35m|\n");
+        printf("| \033[1;36m 10. Quitter                                        \033[1;35m|\n");
+        printf("-------------------------------------------------------\n");
+
+        // Réinitialisation de la couleur
+        printf("\033[0m");
+
+        // Saisie de l'utilisateur
         printf("Choix : ");
         scanf("%d", &retour3);
 
