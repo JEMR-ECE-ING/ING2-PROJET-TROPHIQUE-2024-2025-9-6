@@ -20,16 +20,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54c5ef4-e728-4f67-8b2b-572115dfef1c" name="Changes" comment="Menu plus simple avec chargement de fichiers fonctionnel.">
+    <list default="true" id="f54c5ef4-e728-4f67-8b2b-572115dfef1c" name="Changes" comment="Quelques options d'analyse ont ete implementees, on est BIEEEENG">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/sous_progs_varies.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/sous_progs_varies.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ING2_PROJET_TROPHIQUE_2024_2025_9_6.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ING2_PROJET_TROPHIQUE_2024_2025_9_6.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphes_et_algos.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphes_et_algos.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sous_progs_varies.c" beforeDir="false" afterPath="$PROJECT_DIR$/sous_progs_varies.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sous_progs_varies.h" beforeDir="false" afterPath="$PROJECT_DIR$/sous_progs_varies.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +70,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -95,7 +92,9 @@
       <workItem from="1731488398363" duration="1594000" />
       <workItem from="1731514779055" duration="594000" />
       <workItem from="1732277402334" duration="3700000" />
-      <workItem from="1732303545935" duration="8753000" />
+      <workItem from="1732303545935" duration="9379000" />
+      <workItem from="1732369966215" duration="1010000" />
+      <workItem from="1732379872461" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="Donc je viens de creer des fichiers c avec leurs headers. Respectez bien le contenu qui doit se trouver dans ceux-ci. Algos dans algos, programmes d'affichage et autres dans sous progs varies.">
       <option name="closed" value="true" />
@@ -153,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732308671636</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Quelques options d'analyse ont ete implementees, on est BIEEEENG">
+      <option name="closed" value="true" />
+      <created>1732312384939</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732312384939</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +177,7 @@
     <MESSAGE value="J'ai mis les fonctions des menus dans le fichier sous_progs_varies.c Il faut nettoyer un peu le main :)" />
     <MESSAGE value="Suite du commit d'avant" />
     <MESSAGE value="Menu plus simple avec chargement de fichiers fonctionnel." />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu plus simple avec chargement de fichiers fonctionnel." />
+    <MESSAGE value="Quelques options d'analyse ont ete implementees, on est BIEEEENG" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quelques options d'analyse ont ete implementees, on est BIEEEENG" />
   </component>
 </project>
