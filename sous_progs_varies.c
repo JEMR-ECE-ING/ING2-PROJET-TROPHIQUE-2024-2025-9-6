@@ -6,18 +6,53 @@
 #include "graphes_et_algos.h"
 
 // Fonction pour le cas où l'utilisateur choisit "Commencer"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <time.h>
+
 void application() {
     int retour;
+
+    // Texte ASCII art
+    const char *asciiArt[] = {
+        "   ____ _  __ ______ ____ ___   ____ ___   _____ ____  ___    ___   ___   __    ____ _____ ___  ______ ____ ____   _  __",
+        "  /  _// |/ //_  __// __// _ \\ / __// _ | / ___// __/ / _ |  / _ \\ / _ \\ / /   /  _// ___// _ |/_  __//  _// __ \\ / |/ /",
+        " _/ / /    /  / /  / _/ / , _// _/ / __ |/ /__ / _/  / __ | / ___// ___// /__ _/ / / /__ / __ | / /  _/ / / /_/ //    / ",
+        "/___//_/|_/  /_/  /___//_/|_|/_/  /_/ |_|\\___//___/ /_/ |_|/_/   /_/   /____//___/ \\___//_/ |_|/_/  /___/ \\____//_/|_/  "
+    };
+    int numLines = sizeof(asciiArt) / sizeof(asciiArt[0]);
+
+    // Initialisation des couleurs pour le dégradé
+    const int colors[] = {31, 33, 32, 36, 34, 35, 91, 93, 92, 96, 94, 95}; // Dégradé de couleurs ANSI
+    int numColors = sizeof(colors) / sizeof(colors[0]);
+
+    srand(time(NULL)); // Initialisation du générateur de nombres aléatoires
+
+    // Afficher l'ASCII art avec un dégradé de couleurs
+    for (int i = 0; i < numLines; i++) {
+        for (int j = 0; asciiArt[i][j] != '\0'; j++) {
+            int colorIndex = (i + j) % numColors; // Cycler les couleurs
+            printf("\033[1;%dm%c\033[0m", colors[colorIndex], asciiArt[i][j]); // Affiche chaque lettre avec une couleur
+        }
+        printf("\n"); // Saut de ligne après chaque ligne d'ASCII art
+    }
+
+    // Texte explicatif dans un encadré cyan avec texte rouge
+    printf("\033[1;36m"); // Cyan pour l'encadré
+    printf("*************************************************************************************************\n");
+    printf("*                                                                                               *\n");
+    printf("*\033[0;31m       --- Decouvrez les differents reseaux trophiques ---                                     \033[1;36m*\n");
+    printf("*                                                                                               *\n");
+    printf("*\033[0;31m       1. Choix du reseau                                                                      \033[1;36m*\n");
+    printf("*\033[0;31m       2. Retour au menu principal                                                             \033[1;36m*\n");
+    printf("*\033[0;31m       3. Quitter                                                                              \033[1;36m*\n");
+    printf("*                                                                                               *\n");
+    printf("*************************************************************************************************\n");
+    printf("\033[0m"); // Réinitialisation des couleurs
+
+    // Options utilisateur
     do {
-        printf("   ____ _  __ ______ ____ ___   ____ ___   _____ ____  ___    ___   ___   __    ____ _____ ___  ______ ____ ____   _  __\n");
-        printf("  /  _// |/ //_  __// __// _ \\ / __// _ | / ___// __/ / _ |  / _ \\ / _ \\ / /   /  _// ___// _ |/_  __//  _// __ \\ / |/ /\n");
-        printf(" _/ / /    /  / /  / _/ / , _// _/ / __ |/ /__ / _/  / __ | / ___// ___// /__ _/ / / /__ / __ | / /  _/ / / /_/ //    / \n");
-        printf("/___//_/|_/  /_/  /___//_/|_|/_/  /_/ |_|\\___//___/ /_/ |_|/_/   /_/   /____//___/ \\___//_/ |_|/_/  /___/ \\____//_/|_/  \n");
-        printf("                                                                                                                        \n");
-        printf("--- Decouvrez les differents reseaux trophiques ---\n\n");
-        printf("          1. Choix du reseau\n");
-        printf("          2. Retour au menu principal\n");
-        printf("          3. Quitter\n");
         printf("\nVotre choix : ");
         scanf("%d", &retour);
 
@@ -32,29 +67,66 @@ void application() {
             case 3:
                 exit(0); // Quitter l'application
             default:
-                printf("Choix invalide. Veuillez réessayer.\n");
+                printf("\033[1;31mChoix invalide. Veuillez réessayer.\033[0m\n");
         }
-    } while (retour != 2); // Continue tant que l'utilisateur ne demande pas de retourner au menu principal}
+    } while (retour != 2); // Continue tant que l'utilisateur ne demande pas de retourner au menu principal
 }
 
+
 // Fonction pour le cas où l'utilisateur choisit "Aide"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <time.h>
+
 void aide() {
     int retour;
+
+    // Texte ASCII art
+    const char *asciiArt[] = {
+        "   ____ _  __ ______ ____ ___   ____ ___   _____ ____  ___    ____ ___   ____",
+        "  /  _// |/ //_  __// __// _ \\ / __// _ | / ___// __/ / _ |  /  _// _ \\ / __/",
+        " _/ / /    /  / /  / _/ / , _// _/ / __ |/ /__ / _/  / __ | _/ / / // // _/  ",
+        "/___//_/|_/  /_/  /___//_/|_|/_/  /_/ |_|\\___//___/ /_/ |_|/___//____//___/  "
+    };
+    int numLines = sizeof(asciiArt) / sizeof(asciiArt[0]);
+
+    // Initialisation des couleurs
+    const int colors[] = {31, 33, 32, 36, 34, 35, 91, 93, 92, 96, 94, 95}; // Dégradé de couleurs ANSI
+    int numColors = sizeof(colors) / sizeof(colors[0]);
+
+    srand(time(NULL)); // Initialisation du générateur de nombres aléatoires
+
+    // Afficher l'ASCII art avec un dégradé de couleurs
+    for (int i = 0; i < numLines; i++) {
+        for (int j = 0; asciiArt[i][j] != '\0'; j++) {
+            int colorIndex = (i + j) % numColors; // Cycler les couleurs
+            printf("\033[1;%dm%c\033[0m", colors[colorIndex], asciiArt[i][j]); // Affiche chaque lettre avec une couleur
+        }
+        printf("\n"); // Saut de ligne après chaque ligne d'ASCII art
+    }
+
+    // Texte explicatif dans un encadré
+    printf("\033[1;31m"); // Rouge pour l'encadré
+    printf("*****************************************************************************************************\n");
+    printf("*                                                                                                   *\n");
+    printf("*\033[0;33m          Nous mettrons en oeuvre des modeles de graphes representant des especes (animales,         \033[1;31m*\n");
+    printf("*\033[0;33m          vegetales) ou reservoirs de ressources (lumiere, sol, eau, pature, foret) au niveau des    \033[1;31m*\n");
+    printf("*\033[0;33m          sommets et les interactions entre ces ressources et populations (en termes d'echange de    \033[1;31m*\n");
+    printf("*\033[0;33m          biomasse ou d'influences) au niveau des arcs (aretes orientees). Sur cette base le          \033[1;31m*\n");
+    printf("*\033[0;33m          programme demande pourra permettre d'etudier des aspects structurels (connexite, forte     \033[1;31m*\n");
+    printf("*\033[0;33m          connexite, k-connexite) et des aspects fonctionnels (dynamique des populations, dynamique   \033[1;31m*\n");
+    printf("*\033[0;33m          des ressources).                                                                           \033[1;31m*\n");
+    printf("*                                                                                                   *\n");
+    printf("*\033[0;33m          1. Retour au menu principal                                                               \033[1;31m*\n");
+    printf("*\033[0;33m          2. Quitter                                                                                \033[1;31m*\n");
+    printf("*                                                                                                   *\n");
+    printf("*****************************************************************************************************\n");
+    printf("\033[0m"); // Réinitialisation des couleurs
+
+    // Options utilisateur
     do {
-        printf("   ____ _  __ ______ ____ ___   ____ ___   _____ ____  ___    ____ ___   ____\n");
-        printf("  /  _// |/ //_  __// __// _ \\ / __// _ | / ___// __/ / _ |  /  _// _ \\ / __/\n");
-        printf(" _/ / /    /  / /  / _/ / , _// _/ / __ |/ /__ / _/  / __ | _/ / / // // _/  \n");
-        printf("/___//_/|_/  /_/  /___//_/|_|/_/  /_/ |_|\\___//___/ /_/ |_|/___//____//___/  \n");
-        printf("                                                                              \n");
-        printf("          Nous mettrons en oeuvre des modeles de graphes representant des especes (animales,\n");
-        printf("          vegetales) ou reservoirs de ressources (lumiere, sol, eau, pature, foret) au niveau des\n");
-        printf("          sommets et les interactions entre ces ressources et populations (en termes d'echange de\n");
-        printf("          biomasse ou d'influences) au niveau des arcs (aretes orientees). Sur cette base le programme\n");
-        printf("          demande pourra permettre d'etudier des aspects structurels (connexite, forte connexite, k-connexite)\n");
-        printf("          et des aspects fonctionnels (dynamique des populations, dynamique des ressources).\n");
-        printf("\n          1. Retour au menu principal\n");
-        printf("          2. Quitter\n");
-        printf("Choix : ");
+        printf("\nVotre choix : ");
         scanf("%d", &retour);
 
         switch (retour) {
@@ -69,22 +141,54 @@ void aide() {
     } while (retour != 1 && retour != 2);
 }
 
+
 // Fonction pour afficher le menu principal
 void displayMenu() {
     int choice;
     do {
-        printf("    ____                                           ______                     __     _                          \n");
-        printf("   / __ \\ ___   _____ ___   ____ _ __  __ _  __   /_  __/_____ ____   ____   / /_   (_)____ _ __  __ ___   _____\n");
-        printf("  / /_/ // _ \\ / ___// _ \\ / __ `// / / /| |/_/    / /  / ___// __ \\ / __ \\ / __ \\ / // __ `// / / // _ \\ / ___/\n");
-        printf(" / _, _//  __/(__  )/  __// /_/ // /_/ /_>  <     / /  / /   / /_/ // /_/ // / / // // /_/ // /_/ //  __/(__  ) \n");
-        printf("/_/ |_| \\___//____/ \\___/ \\__,_/ \\__,_//_/|_|    /_/  /_/    \\____// .___//_/ /_//_/ \\__, / \\__,_/ \\___//____/  \n");
-        printf("                                                                  /_/                  /_/                      \n");
-        printf("          En souvenir de Robin Fercoq\n");
-        printf("          Bienvenue dans le repertoire des Reseaux Trophiques\n\n");
-        printf("          1. Commencer\n");
-        printf("          2. Aide \n");
-        printf("          3. Quitter l'interface\n");
+        // Texte ASCII art avec dégradé
+        const char *asciiArt[] = {
+            "    ____                                           ______                     __     _                          ",
+            "   / __ \\ ___   _____ ___   ____ _ __  __ _  __   /_  __/_____ ____   ____   / /_   (_)____ _ __  __ ___   _____",
+            "  / /_/ // _ \\ / ___// _ \\ / __ `// / / /| |/_/    / /  / ___// __ \\ / __ \\ / __ \\ / // __ `// / / // _ \\ / ___/",
+            " / _, _//  __/(__  )/  __// /_/ // /_/ /_>  <     / /  / /   / /_/ // /_/ // / / // // /_/ // /_/ //  __/(__  ) ",
+            "/_/ |_| \\___//____/ \\___/ \\__,_/ \\__,_//_/|_|    /_/  /_/    \\____// .___//_/ /_//_/ \\__, / \\__,_/ \\___//____/  ",
+            "                                                                  /_/                  /_/                      "
+        };
 
+        int colors[] = {31, 33, 32, 36, 34, 35, 91, 93, 92, 96, 94, 95}; // Couleurs ANSI
+        int numColors = sizeof(colors) / sizeof(colors[0]);
+
+        // Afficher chaque ligne de l'ASCII art
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; asciiArt[i][j] != '\0'; j++) {
+                int colorIndex = (i + j) % numColors; // Index cyclique pour les couleurs
+                printf("\033[1;%dm%c\033[0m", colors[colorIndex], asciiArt[i][j]);
+            }
+            printf("\n"); // Saut de ligne après chaque ligne d'ASCII art
+        }
+
+        // Texte en dessous de l'ASCII art
+        const char *borderColor = "\033[1;35m"; // Violet pour l'encadré
+        const char *textColor = "\033[1;33m";   // Orange pour le texte
+        const char *resetColor = "\033[0m";     // Réinitialisation des couleurs
+
+        // Dessiner l'encadré
+        printf("%s", borderColor); // Bordure violette
+        printf("****************************************************\n");
+        printf("*                                                  *\n");
+        printf("*%s          En souvenir de Robin Fercoq             %s*\n", textColor, borderColor);
+        printf("*%s          Bienvenue dans le repertoire            %s*\n", textColor, borderColor);
+        printf("*%s          des Reseaux Trophiques                  %s*\n", textColor, borderColor);
+        printf("*                                                  *\n");
+        printf("*%s          1. Commencer                            %s*\n", textColor, borderColor);
+        printf("*%s          2. Aide                                 %s*\n", textColor, borderColor);
+        printf("*%s          3. Quitter l'interface                  %s*\n", textColor, borderColor);
+        printf("*                                                  *\n");
+        printf("****************************************************\n");
+        printf("%s", resetColor); // Réinitialisation des couleurs
+
+        // Saisie utilisateur
         printf("\nVotre choix : ");
         scanf("%d", &choice);
 
@@ -324,13 +428,21 @@ void reseauTrophiqueManuel() {
     int fichierValide = 0; // To track if the file was loaded successfully
 
     do {
-        printf("--- RESEAUX MANUEL ---\n\n");
-        printf("Entrez le numero du reseau trophique de votre choix :\n");
-        printf("1 - Reseau1\n");
-        printf("2 - Reseau2\n");
-        printf("3 - Reseau3\n");
-        printf("Votre choix : ");
+        // Affichage dans un encadré rouge et texte en vert
+        printf("\033[1;31m"); // Couleur rouge pour l'encadré
+        printf("***********************************************************\n");
+        printf("*                                                         *\n");
+        printf("*\033[0;32m  --- RESEAUX MANUEL ---                                 \033[1;31m*\n");
+        printf("*                                                         *\n");
+        printf("*\033[0;32m  Entrez le numero du reseau trophique de votre choix :  \033[1;31m*\n");
+        printf("*\033[0;32m    1 - Reseau1                                          \033[1;31m*\n");
+        printf("*\033[0;32m    2 - Reseau2                                          \033[1;31m*\n");
+        printf("*\033[0;32m    3 - Reseau3                                          \033[1;31m*\n");
+        printf("*                                                         *\n");
+        printf("***********************************************************\n");
+        printf("\033[0m"); // Réinitialisation des couleurs
 
+        printf("\nVotre choix : "); // Texte vert pour la saisie
         int choix;
         scanf("%d", &choix); // Lecture du choix de l'utilisateur
 

@@ -20,38 +20,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54c5ef4-e728-4f67-8b2b-572115dfef1c" name="Changes" comment="Menu plus simple avec chargement de fichiers fonctionnel.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_8_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_8_31_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="f54c5ef4-e728-4f67-8b2b-572115dfef1c" name="Changes" comment="J'ai mis un switch case pour le Menu des réseaux, normalement ca ne change pas les résultats des options, le graphe est vraisemblablement bien ouvert. J'ai changer deux trois options esthetiques">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-39cf0c9c8a15103848f6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-fcfd79999ed34f633c4c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8a0b63c2fbd298594846.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-11-13T09-12-33-0535.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ING2_PROJET_TROPHIQUE_2024_2025_9_6-Debug-ea03bb632dd96174e59c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-816c386b3a6ffe26176e.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/graphes_et_algos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/graphes_et_algos.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/sous_progs_varies.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/sous_progs_varies.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ING2_PROJET_TROPHIQUE_2024_2025_9_6.dir/sous_progs_varies.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ING2_PROJET_TROPHIQUE_2024_2025_9_6.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ING2_PROJET_TROPHIQUE_2024_2025_9_6.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sous_progs_varies.c" beforeDir="false" afterPath="$PROJECT_DIR$/sous_progs_varies.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sous_progs_varies.h" beforeDir="false" afterPath="$PROJECT_DIR$/sous_progs_varies.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +166,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732308671636</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="J'ai mis un switch case pour le Menu des réseaux, normalement ca ne change pas les résultats des options, le graphe est vraisemblablement bien ouvert. J'ai changer deux trois options esthetiques">
+      <option name="closed" value="true" />
+      <created>1732382543350</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732382543350</updated>
+    </task>
+    <task id="LOCAL-00009" summary="J'ai mis un switch case pour le Menu des réseaux, normalement ca ne change pas les résultats des options, le graphe est vraisemblablement bien ouvert. J'ai changer deux trois options esthetiques">
+      <option name="closed" value="true" />
+      <created>1732382579418</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732382579418</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +198,7 @@
     <MESSAGE value="J'ai mis les fonctions des menus dans le fichier sous_progs_varies.c Il faut nettoyer un peu le main :)" />
     <MESSAGE value="Suite du commit d'avant" />
     <MESSAGE value="Menu plus simple avec chargement de fichiers fonctionnel." />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu plus simple avec chargement de fichiers fonctionnel." />
+    <MESSAGE value="J'ai mis un switch case pour le Menu des réseaux, normalement ca ne change pas les résultats des options, le graphe est vraisemblablement bien ouvert. J'ai changer deux trois options esthetiques" />
+    <option name="LAST_COMMIT_MESSAGE" value="J'ai mis un switch case pour le Menu des réseaux, normalement ca ne change pas les résultats des options, le graphe est vraisemblablement bien ouvert. J'ai changer deux trois options esthetiques" />
   </component>
 </project>
